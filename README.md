@@ -8,6 +8,8 @@ In Unity you can layer on animations and UI, to provide a more engagening user e
 
 ## How to use this template
 
+(2019.2.19 was used to create this version)
+
 To record video of the game we recommend using Unity's preview recorder package which can be found in the package manager. 
 
 If you want to support portait and landscape, you can record using a resolution of 1624x750.
