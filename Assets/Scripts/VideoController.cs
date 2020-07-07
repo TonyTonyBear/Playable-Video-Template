@@ -25,7 +25,7 @@ public class VideoController : MonoBehaviour
     #if UNITY_EDITOR
     //Simple method to set the values in the PlaygroundFields scriptable object to the values inside of the stops array
     //call this method if you've changed the values in the stops array to assign those changes as the default playground field values
-    [ContextMenu("Set Times")]
+    [ContextMenu("Set PGfields")]
     void SetPlaygroundStopTimes()
     {
         pgFields.stop0 = stops[0].stopTime;
@@ -33,6 +33,15 @@ public class VideoController : MonoBehaviour
         pgFields.stop2 = stops[2].stopTime;
         pgFields.stop3 = stops[3].stopTime;
     }
+    [ContextMenu("Set Array")]
+    void SetArrayStopTimes()
+    {
+        stops[0].stopTime = pgFields.stop0;
+        stops[1].stopTime = pgFields.stop1;
+        stops[2].stopTime = pgFields.stop2;
+        stops[3].stopTime = pgFields.stop3;
+    }
+
     #endif
     
     void Start()
@@ -68,6 +77,7 @@ public class VideoController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            videoPlayer.SetDirectAudioMute(0,false);//Unmute the video player on first input
             if (videoPlayer.isPaused)
             {
                 videoPlayer.Play();
