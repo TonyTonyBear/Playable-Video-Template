@@ -1,5 +1,3 @@
-# Playable Video Template
-
 ## What is a Playable Video?
 
 A Playable Video is an interactive ad, which is served as a playable ad (HTML). 
