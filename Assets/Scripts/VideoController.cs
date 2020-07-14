@@ -15,13 +15,14 @@ public class VideoController : MonoBehaviour
 
     [SerializeField] private Stop[] stops;
 
+    [SerializeField] private AudioSource audioSource;
     
     [SerializeField] private GameObject tutorialOverlay;
     [SerializeField] private Text tutorialText;
-    private int stopIndex = 0;
-
-    private bool hitStoppingPoint = false;
     
+    private int stopIndex = 0;
+    private bool hitStoppingPoint = false;
+    private bool audioPlaying = false;
     #if UNITY_EDITOR
     //Simple method to set the values in the PlaygroundFields scriptable object to the values inside of the stops array
     //call this method if you've changed the values in the stops array to assign those changes as the default playground field values
@@ -77,9 +78,17 @@ public class VideoController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            videoPlayer.SetDirectAudioMute(0,false);//Unmute the video player on first input
             if (videoPlayer.isPaused)
             {
+                if (!audioPlaying)
+                {
+                    audioSource.Play();//If this is the first time audio is meant to play, use .Play() and set the bool to true to stop .Play() executing multiple times
+                    audioPlaying = true;
+                }
+                else
+                {
+                    audioSource.UnPause();//If .Play() has already been called, .Unpause() should be used to continue the video from where it was paused
+                }
                 videoPlayer.Play();
                 tutorialOverlay.SetActive(false);
                 hitStoppingPoint = false;
@@ -105,6 +114,7 @@ public class VideoController : MonoBehaviour
     {
         if (!videoPlayer.isPaused)
         {
+            audioSource.Pause();
             videoPlayer.Pause();
             tutorialOverlay.SetActive(true);
             hitStoppingPoint = true;
