@@ -13,15 +13,12 @@ MonoBehaviour:
   m_Name: PlaygroundFields
   m_EditorClassIdentifier: 
   Aggro: 0
-  stop0: 3.1
-  stop1: 4.7
-  stop2: 7.2
-  stop3: 9.5
-  tutorialString: TAP TO JUMP
+  stop0: 0
+  tutorialString: HOLD TO DRIVE
   tutorialTextColour: {r: 1, g: 1, b: 1, a: 1}
   ctaButtonColour: {r: 1, g: 1, b: 1, a: 1}
   ctaButtonString: INSTALL
   ctaButtonTextColour: {r: 0, g: 0, b: 0, a: 1}
-  endCtaButtonColour: {r: 1, g: 1, b: 1, a: 1}
+  endCtaButtonColour: {r: 1, g: 1, b: 1, a: 0}
   endCtaButtonString: INSTALL
   endCtaButtonTextColour: {r: 0, g: 0, b: 0, a: 1}

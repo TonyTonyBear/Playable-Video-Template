@@ -29,17 +29,11 @@ public class VideoController : MonoBehaviour
     void SetPlaygroundStopTimes()
     {
         pgFields.stop0 = stops[0].stopTime;
-        pgFields.stop1 = stops[1].stopTime;
-        pgFields.stop2 = stops[2].stopTime;
-        pgFields.stop3 = stops[3].stopTime;
     }
     [ContextMenu("Set Array")]
     void SetArrayStopTimes()
     {
         stops[0].stopTime = pgFields.stop0;
-        stops[1].stopTime = pgFields.stop1;
-        stops[2].stopTime = pgFields.stop2;
-        stops[3].stopTime = pgFields.stop3;
     }
 
     #endif
@@ -48,9 +42,6 @@ public class VideoController : MonoBehaviour
     {
         //Set each stop to the value input in Playground
         stops[0].stopTime = pgFields.stop0;
-        stops[1].stopTime = pgFields.stop1;
-        stops[2].stopTime = pgFields.stop2;
-        stops[3].stopTime = pgFields.stop3;
 
         tutorialText.text = pgFields.tutorialString;
         tutorialText.color = pgFields.tutorialTextColour;

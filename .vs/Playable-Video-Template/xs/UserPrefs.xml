@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{200854EE-027D-4608-A1FD-7360F7EEF294}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EndScreenController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/VideoController.cs" Line="63" Column="27" />
+      <File FileName="Assets/Scripts/PlaygroundFields.cs" Line="12" Column="24" />
+      <File FileName="Assets/Scripts/MenuScaler.cs" />
+      <File FileName="Assets/Scripts/EndScreenController.cs" Line="30" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Playable-Video-Template" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="EndScreenController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f7e59968-3362-464b-b2d1-b712869af47c" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

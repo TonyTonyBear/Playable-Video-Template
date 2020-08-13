@@ -10,12 +10,6 @@ public class PlaygroundFields : ScriptableObject
 
     [LunaPlaygroundField("Stop 1",0,"Stops")]
     public float stop0;
-    [LunaPlaygroundField("Stop 2",1,"Stops")]
-    public float stop1;
-    [LunaPlaygroundField("Stop 3",2,"Stops")]
-    public float stop2;
-    [LunaPlaygroundField("Stop 4",3,"Stops")]
-    public float stop3;
 
     [LunaPlaygroundField("tutorial Text", 1, "Tutorial")]
     public string tutorialString;
