@@ -13,6 +13,10 @@ public class EndScreenController : MonoBehaviour
 
     [SerializeField] private Image ctaImage;
     [SerializeField] private Text ctaText;
+    [SerializeField] private Text messageText;
+    [SerializeField] private Image profileImage;
+    [SerializeField] private List<Sprite> profiles;
+    [SerializeField] private int profileIndex;
 
     bool endScreenActive;
 
@@ -23,6 +27,14 @@ public class EndScreenController : MonoBehaviour
         ctaImage.color = pgFields.endCtaButtonColour;
         ctaText.text = pgFields.endCtaButtonString;
         ctaText.color = pgFields.endCtaButtonTextColour;
+        messageText.color = pgFields.messageColor;
+        messageText.text = pgFields.messageText;
+        profileIndex = pgFields.profileIndex;
+
+        if (profileIndex < 0 || profileIndex >= profiles.Count)
+            profileIndex = 0;
+
+        profileImage.sprite = profiles[profileIndex];
     }
     
     public void Start()

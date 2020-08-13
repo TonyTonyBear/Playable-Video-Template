@@ -15,6 +15,8 @@ public class PlaygroundFields : ScriptableObject
     public string tutorialString;
     [LunaPlaygroundField("tutorial Text Colour", 2, "Tutorial")]
     public Color tutorialTextColour;
+    [LunaPlaygroundField("tutorial Text Y Position", 3, "Tutorial")]
+    public float tutorialYPos;
 
     [LunaPlaygroundField("CTA button Colour", 0, "CTA")]
     public Color ctaButtonColour;
@@ -30,5 +32,11 @@ public class PlaygroundFields : ScriptableObject
     [LunaPlaygroundField("End CTA button Text Colour", 2, "End CTA")]
     public Color endCtaButtonTextColour;
 
+    [LunaPlaygroundField("Pickup Message Text Color", 0, "Message Text")]
+    public Color messageColor;
+    [LunaPlaygroundField("Pickup Message Text", 1, "Message Text")]
+    public string messageText;
 
+    [LunaPlaygroundField("Profile Pic Index", 0, "Profile Pic")]
+    public int profileIndex;
 }

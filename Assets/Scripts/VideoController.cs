@@ -45,6 +45,9 @@ public class VideoController : MonoBehaviour
 
         tutorialText.text = pgFields.tutorialString;
         tutorialText.color = pgFields.tutorialTextColour;
+        Vector3 updatedPosition = tutorialText.transform.localPosition;
+        updatedPosition.y = pgFields.tutorialYPos;
+        tutorialText.transform.localPosition = updatedPosition;
         
         //Subscribe to loopPointReached for when the video ends
         videoPlayer.loopPointReached += DisableInput;

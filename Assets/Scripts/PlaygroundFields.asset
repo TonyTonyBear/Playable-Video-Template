@@ -16,9 +16,13 @@ MonoBehaviour:
   stop0: 0
   tutorialString: HOLD TO DRIVE
   tutorialTextColour: {r: 1, g: 1, b: 1, a: 1}
+  tutorialYPos: -334
   ctaButtonColour: {r: 1, g: 1, b: 1, a: 1}
-  ctaButtonString: INSTALL
+  ctaButtonString: Let's Go
   ctaButtonTextColour: {r: 0, g: 0, b: 0, a: 1}
   endCtaButtonColour: {r: 1, g: 1, b: 1, a: 0}
   endCtaButtonString: INSTALL
   endCtaButtonTextColour: {r: 0, g: 0, b: 0, a: 1}
+  messageColor: {r: 0, g: 0, b: 0, a: 1}
+  messageText: Test
+  profileIndex: 8
