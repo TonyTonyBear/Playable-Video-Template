@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+public enum FingerType { BLACK_FINGER, CARTOON_FINGER, CARTOON_FINGER_2, HAND_6, IS_HAND_POINT, LADY_FINGER_1, WHITE_FINGER}
+
 [CreateAssetMenu(fileName = "PlaygroundFields", menuName = "PlaygroundFields")]
 public class PlaygroundFields : ScriptableObject
 {
+    [SerializeField] private Sprite[] fingerSprites;
 
     [LunaPlaygroundField("Aggro Mode",0,"Aggro")]
     public bool Aggro;
@@ -39,4 +43,16 @@ public class PlaygroundFields : ScriptableObject
 
     [LunaPlaygroundField("Profile Pic Index", 0, "Profile Pic")]
     public int profileIndex;
+
+    [LunaPlaygroundField("Finger Type", 0, "CTA Finger")]
+    [SerializeField] private FingerType fingerType;
+    [LunaPlaygroundField("Finger Position", 2, "CTA Finger")]
+    public Vector3 fingerPosition;
+    [LunaPlaygroundField("Finger Rotation", 1, "CTA Finger")]
+    public float fingerRotation;
+    [LunaPlaygroundField("Finger Scale", 2, "CTA Finger")]
+    public float fingerScale = 1f;
+
+    public Sprite fingerSprite { get { return fingerSprites[(int)fingerType]; } }
+
 }

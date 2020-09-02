@@ -8,9 +8,6 @@ public class EndScreenController : MonoBehaviour
 {
 
     [SerializeField] private PlaygroundFields pgFields;
-    
-    [SerializeField] private GameObject ctaButton;
-
     [SerializeField] private Image ctaImage;
     [SerializeField] private Text ctaText;
     [SerializeField] private Text messageText;
@@ -39,7 +36,6 @@ public class EndScreenController : MonoBehaviour
     
     public void Start()
     {
-        ctaButton.SetActive(false);
         endScreenActive = true;
         if (pgFields.Aggro)
         {

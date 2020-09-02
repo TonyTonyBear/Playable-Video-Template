@@ -15,7 +15,9 @@ public class VideoController : MonoBehaviour
 
     [SerializeField] private Stop[] stops;
 
-    
+    [SerializeField] private Image fingerImage;
+    private Vector3 fingerScaleOrigin;
+
     [SerializeField] private GameObject tutorialOverlay;
     [SerializeField] private Text tutorialText;
     private int stopIndex = 0;
@@ -42,6 +44,11 @@ public class VideoController : MonoBehaviour
     {
         //Set each stop to the value input in Playground
         stops[0].stopTime = pgFields.stop0;
+
+        fingerImage.sprite = pgFields.fingerSprite;
+        fingerImage.rectTransform.anchoredPosition = pgFields.fingerPosition;
+        fingerImage.rectTransform.localScale = fingerImage.rectTransform.localScale * pgFields.fingerScale;
+        fingerImage.rectTransform.rotation = fingerImage.rectTransform.rotation * Quaternion.Euler(new Vector3(0f, 0f, pgFields.fingerRotation));
 
         tutorialText.text = pgFields.tutorialString;
         tutorialText.color = pgFields.tutorialTextColour;
